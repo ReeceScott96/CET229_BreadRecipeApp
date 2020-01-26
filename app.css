@@ -1,0 +1,39 @@
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+.ios .block-strong {
+    padding: 0 !important;
+    margin: 15px 10px;
+    background: none;
+}
+.company-logo-container {
+    margin: 30px;
+}
+.company-logo-container .company-logo {
+    background-color: white;
+    border-radius: 50%;
+    width: 100%;
+}
+.page-content {
+    background-image: url("images/app_background.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.recipe-header {
+    text-align: center;
+}
+.recipe-image {
+    width: 95%;
+    padding-top: 8px;
+    border-radius: 120px;
+}
+.recipe-block {
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+}
+.recipe-block li {
+    list-style: none;
+    padding: 5px 0;
+}

@@ -1,0 +1,47 @@
+<template>
+    <div class="page" data-page="weblinks">
+      <div class="navbar">
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="ios-only">Back</span>
+            </a>
+          </div>
+          <div class="title">{{item.BreadName}} Recipe</div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="block block-strong">
+          <div class="recipe-container">
+            <div class="recipe-header recipe-block">
+              <img class="recipe-image" src="{{item.BreadImage}}">
+              <h1>{{item.BreadName}}</h1>
+              <p>{{item.BreadIntroductionText}}</p>
+            </div>
+            <div class="recipe-ingredients-container recipe-block">
+              {{#each item.Ingredients}}
+              <li>{{this}}</li>
+              {{/each}}
+            </div>
+            <div class="recipe-instructions-container recipe-block">
+              {{#each item.RecipeInstructions}}
+              <li><strong>Step {{@index+1}}.</strong> {{this}}</li>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </template>
+  <script>
+    return {
+      data: function () {
+        return {
+          item: this.$root.recipes[this.$route.params.id]
+        }
+      },
+    }
+  </script>

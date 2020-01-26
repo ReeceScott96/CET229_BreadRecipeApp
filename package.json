@@ -1,0 +1,14 @@
+{
+  "name": "informationsystems_assignment",
+  "version": "1.0.0",
+  "description": "Git containing files needed for Info Systems assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Reece Scott",
+  "license": "ISC",
+  "devDependencies": {
+    "framework7": "^3.4.3"
+  }
+}

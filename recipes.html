@@ -1,0 +1,45 @@
+<template>
+    <div class="page" data-page="weblinks">
+      <div class="navbar">
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="ios-only">Back</span>
+            </a>
+          </div>
+          <div class="title">Bread Recipes</div>
+        </div>
+      </div>
+      <div class="list-index"></div>
+      <div class="page-content">
+        <div class="company-logo-container">
+          <img class="company-logo" src="images/app_logo.png">
+        </div>
+      <div class="list links-list">
+          <ul>
+            {{#each $root.recipes}}
+            <li><a href="/recipe/{{@index}}/">{{BreadName}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </template>
+  <script>
+    return {}
+    var listIndex = app.listIndex.create({
+      // ".list-index" element
+      el: '.list-index',
+      // List el where to look indexes and scroll for
+      listEl: '.links-list',
+      // Generate indexes automatically based on ".list-group-title" and ".item-divider"
+      indexes: 'auto',
+      // Scroll list on indexes click and touchmove
+      scrollList: true,
+      // Enable bubble label when swiping over indexes
+      label: true,
+    });
+  </script>
+  <!-- More info on lists available at https://framework7.io/docs/list-index.html  -->
